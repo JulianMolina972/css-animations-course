@@ -12,6 +12,7 @@
       width: 100%;
       display: grid;
       place-items: center;
+      background-color: whitesmoke;
     }
     .phone {
       position: relative;
@@ -21,6 +22,7 @@
       height: 600px;
       background: #CCEFFF;
       box-shadow: 0px 0px 19px 4px rgba(0, 0, 0, 0.527);
+      overflow: hidden;
 
     }
     .layer {
@@ -30,7 +32,6 @@
       z-index: 1;
       width: 80px;
       height: 450px;
-      background: whitesmoke;
       bottom: 0;
       right: 60px;
     }
@@ -38,7 +39,6 @@
       z-index: 2;
       width: 80px;
       height: 450px;
-      background: whitesmoke;
       bottom: 0;
       left: 60px;
     }
@@ -49,14 +49,16 @@
       margin: 0 auto;
       width: 220px;
       height: 400px;
-      background: wheat;
+      background: rgb(49, 51, 211);
       bottom: 0;
+      border-radius: 30px 30px 0 0;
+      overflow: hidden;
+      border: 2px solid black;  
     }
     .layer-4 {
       z-index: 4;
       width: 80px;
       height: 330px;
-      background: whitesmoke;
       bottom: 0;
       left: 50px;
     }
@@ -65,15 +67,17 @@
       left: 0;
       right: 0;
       width: 190px;
-      height: 300px;
-      background: rgb(160, 118, 39);
+      height: 280px;
+      background: rgb(49, 51, 211);
       bottom: 0;
+      border-radius: 30px 30px 0 0;
+      overflow: hidden;
+      border: 2px solid black;  
     }
     .layer-6 {
       z-index: 6;
       width: 80px;
       height: 250px;
-      background: whitesmoke;
       bottom: 0;
       right: 40px;
     }
@@ -82,14 +86,17 @@
       right: 0;
       width: 170px;
       height: 200px;
-      background: rgb(39, 41, 160);
+      background: rgb(49, 51, 211);
       bottom: 0;
+      border-radius: 30px 30px 0 0;
+      overflow: hidden;
+      border: 2px solid black;  
     }
     .layer-8 {
       z-index: 8;
-      width: 140px;
-      height: 100px;
-      background: greenyellow;
+      width: 100px;
+      height: 90px;
+      background: rgba(185, 28, 41, 1);
       bottom: 0;
       left: 0;
       right: 0;
@@ -99,26 +106,142 @@
       z-index: 9;
       width: 100px;
       height: 90px;
-      background: rgba(185, 28, 41, 1);
+
       bottom: 0;
-      left: 0;
+      left: 10px;
     }
     .layer-10 {
       z-index: 10;
       z-index: 9;
       width: 100px;
       height: 90px;
-      background: rgba(185, 28, 41, 1);
+
       bottom: 0;
-      right: 0;
+      right: 40px;
     }
 
     .left-ear--outer {
-      background: black;
+      background: white;
       border-radius: 90%;
       width: 20px;
       height: 50px;
+      position: absolute;
+      left: 10px;
     }
+
+    .left-ear--inner {
+      background: rgba(255, 0, 179, 0.671);
+      border-radius: 90%;
+      width: 10px;
+      height: 50px;
+      position: absolute;
+      left: 15px;
+      top: 8px;
+    }
+
+    .right-ear--outer {
+      background: white;
+      border-radius: 90%;
+      width: 20px;
+      height: 50px;
+      position: absolute;
+      right: 10px;
+    }
+
+    .right-ear--inner {
+      background: rgba(255, 0, 179, 0.671);
+      border-radius: 90%;
+      width: 10px;
+      height: 50px;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+    }
+
+    .head {
+      background: white;
+      border-radius: 50%;
+      width: 100%;
+      height: 80px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 30px;
+    }
+
+    .head__eye {
+      background: black;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      top: 9px;
+
+    }
+    .head__eye--left {
+      left: 45px;
+    }
+
+    .head__eye--right {
+      right: 45px;
+    }
+
+    .zigzag {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, teal 25%, transparent 25%) -10px 0,
+        linear-gradient(225deg, rgb(28, 0, 128) 25%, transparent 25%) -10px 0,
+        linear-gradient(315deg, rgb(128, 0, 0) 25%, transparent 25%),
+        linear-gradient(45deg, rgb(36, 128, 0) 25%, transparent 25%);
+
+      background-size: 20px 20px;
+    }
+
+    .cloud {
+      width: 175px; height: 60px;
+      background: #BFF;
+      background: linear-gradient(top, #BFF 5%, #DFF 100%);
+      background: -webkit-linear-gradient(top, #FFF 1%, #BFF 100%);
+      background: -moz-linear-gradient(top, #BFF 5%, #DFF 100%);
+      background: -ms-linear-gradient(top, #BFF 5%, #DFF 100%);
+      background: -o-linear-gradient(top, #BFF 5%, #DFF 100%);
+      top: 30px; left: -20px;
+      border-radius: 100px;
+      position: absolute;
+
+    }
+
+    .cloud:after, .cloud:before {
+      content: '';
+      position: absolute;
+      background: #FFF;
+      z-index: -1;
+    }
+
+    .cloud:after {
+      width: 100px; height: 100px;
+      top: -50px; left: 50px;
+      border-radius: 100px;
+    }
+
+    .cloud:before {
+      width: 50px; height: 50px;
+      bottom: 40px; left: 30px;
+      border-radius: 200px;
+    }
+
+    .shadow {
+      width: 350px;
+      position: absolute; bottom: -10px; 
+      background: #000;
+      box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
 
 
   </style>
@@ -135,15 +258,60 @@
         <div class="head__eye head__eye--right"></div>
       </div>
     </div>
-    <div class="layer layer-2"></div>
-    <div class="layer layer-3"></div>
-    <div class="layer layer-4"></div>
-    <div class="layer layer-5"></div>
-    <div class="layer layer-6"></div>
-    <div class="layer layer-7"></div>
-    <div class="layer layer-8"></div>
-    <div class="layer layer-9"></div>
-    <div class="layer layer-10"></div>
+    <div class="layer layer-2">
+      <div class="left-ear--outer"></div>
+      <div class="left-ear--inner"></div>
+      <div class="right-ear--outer"></div>
+      <div class="right-ear--inner"></div>
+      <div class="head">
+        <div class="head__eye head__eye--left"></div>
+        <div class="head__eye head__eye--right"></div>
+      </div>
+    </div>
+    <div class="layer layer-3">
+      <div class="zigzag"></div>
+    </div>
+    <div class="layer layer-4">
+      <div class="left-ear--outer"></div>
+      <div class="left-ear--inner"></div>
+      <div class="right-ear--outer"></div>
+      <div class="right-ear--inner"></div>
+      <div class="head">
+        <div class="head__eye head__eye--left"></div>
+        <div class="head__eye head__eye--right"></div>
+      </div>
+    </div>
+    <div class="layer layer-5">
+      <div class="zigzag"></div>
+    </div>
+    <div class="layer layer-6">
+      <div class="left-ear--outer"></div>
+      <div class="left-ear--inner"></div>
+      <div class="right-ear--outer"></div>
+      <div class="right-ear--inner"></div>
+      <div class="head">
+        <div class="head__eye head__eye--left"></div>
+        <div class="head__eye head__eye--right"></div>
+      </div>
+    </div>
+    <div class="layer layer-7">
+      <div class="zigzag"></div>
+    </div>
+    <!-- <div class="layer layer-8">
+      <div class="cloud">
+        <span class="shadow"></span>
+      </div>
+    </div> -->
+    <div class="layer layer-9">
+      <div class="cloud">
+        <span class="shadow"></span>
+      </div>
+    </div>
+    <div class="layer layer-10">
+      <div class="cloud">
+        <span class="shadow"></span>
+      </div>
+    </div>
   </div>
 </body>
 </html>
